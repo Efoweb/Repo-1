@@ -14,6 +14,10 @@ Alchemy will build a fullstack application with this serving as the backend port
 - [ ] Players can win token after winning games
 - [ ] Players can level up in games
 
+## Stretch Goals
+- {} Reward Nth user (100th player get a free level up)
+- {} Track players best game to display on profile
+
 ## Data Tables
 ### Leaderboard
 - Leaderboard Rank
@@ -21,11 +25,13 @@ Alchemy will build a fullstack application with this serving as the backend port
 - Score
 
 ### Users
+- Admin/Employee/Player
 - Username
 - Password
 - AuthToken
 
 ### Player Profile
+- Id (to tack total players)
 - Name
 - Username
 - CurrentLevel
