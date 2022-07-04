@@ -35,3 +35,4 @@ Alchemy will build a fullstack application with this serving as the backend port
 - Name
 - Username
 - CurrentLevel
+- Best Game
