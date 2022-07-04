@@ -11,7 +11,7 @@ Alchemy will build a fullstack application with this serving as the backend port
 - [ ] Players can upgrade account to play second game
 - [ ] Players type in chat while playing
 - [ ] Players can quit game
-- [ ] Players can win token after winning games
+- [ ] Players can win tokens after winning games
 - [ ] Players can level up in games
 
 ## Stretch Goals
@@ -35,4 +35,5 @@ Alchemy will build a fullstack application with this serving as the backend port
 - Name
 - Username
 - CurrentLevel
+- Total Tokens
 - Best Game
