@@ -15,8 +15,8 @@ Alchemy will build a fullstack application with this serving as the backend port
 - [ ] Players can level up in games
 
 ## Stretch Goals
-- { } Reward Nth user (100th player get a free level up)
-- { } Track players best game to display on profile
+- [ ] Reward Nth user (100th player get a free level up)
+- [ ] Track players best game to display on profile
 
 ## Data Tables
 ### Leaderboard
