@@ -2,6 +2,8 @@ import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 import { Button } from './Button';
+import Axios from 'axios';
+
 
 
 
@@ -23,6 +25,13 @@ function NavBar() {
 
     window.addEventListener('resize',showButton);
 
+    const getCar = () => {
+        Axios.get("http://localhost:8080/customer/viewCars").then((response) => {
+            console.log(response)
+        })
+    }
+
+    
   return (
     <>
         <nav className='navbar'>
@@ -35,18 +44,18 @@ function NavBar() {
                 </div>
                 <ul className={click ? 'nav-menu active' : 'nav-menu'}>
                     <li className='nav-item'>
-                        <Link to='/' className='nav-links' onClick={closeMobileMenu}>
-                            Home
+                        <Link to='/Games' className='nav-links' onClick={closeMobileMenu}>
+                        Games
                         </Link>
                     </li>
                     <li className='nav-item'>
-                        <Link to='/services' className='nav-links' onClick={closeMobileMenu}>
-                            Services
+                        <Link to='/Leaderboards' className='nav-links' onClick={closeMobileMenu}>
+                        Leaderboards
                         </Link>
                     </li>
                     <li className='nav-item'>
-                        <Link to='/products' className='nav-links' onClick={closeMobileMenu}>
-                            Products
+                        <Link to='/Profile' className='nav-links' onClick={closeMobileMenu}>
+                            Profile
                         </Link>
                     </li>
                     <li className='nav-item'>
