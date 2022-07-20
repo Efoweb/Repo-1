@@ -4,7 +4,7 @@ import '../../App.css'
 export default function Games(){
     return (
         <div >
-            <h1 className='Bdef'>HEYYYYY YOUUUU GUYSSSSSS GAMES</h1>
+            <h1 className='Games'>HEYYYYY YOUUUU GUYSSSSSS GAMES</h1>
         </div>
         
     )

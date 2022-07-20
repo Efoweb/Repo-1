@@ -5,25 +5,42 @@ import {useTable} from 'react-table'
 
 
 
+
+
 export default function Leaderboards(){
 
-    const [joke, setJoke] = useState("")
-    const getJoke =() => {
-        axios.get('/players').then(
+    const [columnNames, setTable] = useState("")
+    const getTable =() => {
+        axios.get('/leaderboards').then(
             (response) => {
                 console.log(response);
-                setJoke(Object.keys(response.data[0]).map(Attr => <th key={Attr}>{Attr.toUpperCase()}</th>))
+                setTable(Object.keys(response.data[0]).map(Attr => <th key={Attr}>{Attr.toUpperCase()}</th>))
             }
         );
     };
+    
+    const [rows, setRows] = useState("")
+    const getRows =() => {
+        axios.get('/leaderboards').then(
+            (response) => {
+                console.log(response);
+                setRows(Object.keys(response.data[0].leaderboardid).map(Attr => <th key={Attr}>{Attr.toUpperCase()}</th>))
+            }
+        );
+    }
+
     //response.data[0].id
     return (
     
-    <div className='Bdef'> 
-        <button onClick={getJoke}>
-            View Leaderboards
+    <div className='Leaderboards'> 
+        <button onClick={getTable}>
+            View Leaderboard Coloumn Names
         </button>
-        {joke}
+        <button onClick={getRows}>
+            View Leaderboard Row Enteries
+        </button>
+        {columnNames}
+        {rows}
     </div>
     )
 }
