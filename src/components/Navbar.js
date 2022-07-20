@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 import { Button } from './Button';
+import { ButtonSignin } from './ButtonSignin';
 import Axios from 'axios';
 
 
@@ -28,9 +29,7 @@ function NavBar() {
     }, []);
 
     window.addEventListener('resize',showButton); 
-    
-
-
+   
   return (
     <>
         <nav className='navbar'>
@@ -58,16 +57,17 @@ function NavBar() {
                         </Link>
                     </li>
                     <li className='nav-item'>
-                        <Link to='/sign-up' className='nav-links-mobile' onClick={closeMobileMenu}>
-                            Sign up
+                        <Link to='/sign-in' className='nav-links-mobile' onClick={closeMobileMenu}>
+                            SIGN IN
                         </Link>
                     </li>
                 </ul>
-                {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>}
+                {button && <ButtonSignin  buttonStyle='btn--outline'>SIGN IN</ButtonSignin>}
             </div>
         </nav>
     </>
   );
 }
+// buttonStyle='btn--primary'
 
 export default NavBar
