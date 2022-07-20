@@ -1,5 +1,8 @@
 .navbar {
     background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
+    
+    /* background: linear-gradient(90deg, rgb(82, 81, 49) 0%, rgb(8, 20, 1) 100%);
+     */
     height: 80px;
     display: flex;
     justify-content: center;
@@ -84,7 +87,7 @@
       display: flex;
       flex-direction: column;
       width: 100%;
-      height: 90vh;
+      height: 1049%;
       position: absolute;
       top: 80px;
       left: -100%;
@@ -151,7 +154,7 @@
     }
   
     .nav-links-mobile:hover {
-      background: #fff;
+      background: rgb(255, 255, 255);
       color: #242424;
       transition: 250ms;
     }

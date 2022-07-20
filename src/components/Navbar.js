@@ -57,7 +57,7 @@ function NavBar() {
                         </Link>
                     </li>
                     <li className='nav-item'>
-                        <Link to='/sign-in' className='nav-links-mobile' onClick={closeMobileMenu}>
+                        <Link to='/SignIn' className='nav-links-mobile' onClick={closeMobileMenu}>
                             SIGN IN
                         </Link>
                     </li>
@@ -68,6 +68,5 @@ function NavBar() {
     </>
   );
 }
-// buttonStyle='btn--primary'
 
 export default NavBar
