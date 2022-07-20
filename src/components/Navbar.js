@@ -1,7 +1,8 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 import { Button } from './Button';
+import { ButtonSignin } from './ButtonSignin';
 import Axios from 'axios';
 
 
@@ -23,20 +24,17 @@ function NavBar() {
         }
     };
 
-    window.addEventListener('resize',showButton);
+    useEffect(() => {
+        showButton()
+    }, []);
 
-    const getCar = () => {
-        Axios.get("http://localhost:8080/customer/viewCars").then((response) => {
-            console.log(response)
-        })
-    }
-
-    
+    window.addEventListener('resize',showButton); 
+   
   return (
     <>
         <nav className='navbar'>
             <div className='navbar-container'>
-                <Link to="/" className='navbar-logo'>
+                <Link to="/" className='navbar-logo' onClick={closeMobileMenu}>
                     Alchemy <i className='fab fa-typo3' />
                 </Link>
                 <div className='menu-icon' onClick={handleClick}>
@@ -59,12 +57,12 @@ function NavBar() {
                         </Link>
                     </li>
                     <li className='nav-item'>
-                        <Link to='/sign-up' className='nav-links-mobile' onClick={closeMobileMenu}>
-                            Sign up
+                        <Link to='/SignIn' className='nav-links-mobile' onClick={closeMobileMenu}>
+                            SIGN IN
                         </Link>
                     </li>
                 </ul>
-                {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>}
+                {button && <ButtonSignin  buttonStyle='btn--outline'>SIGN IN</ButtonSignin>}
             </div>
         </nav>
     </>

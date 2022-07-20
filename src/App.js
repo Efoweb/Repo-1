@@ -1,27 +1,35 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 import NavBar from './components/Navbar';
 import { BrowserRouter as Router, Routes ,Route } from 'react-router-dom';
 import Axios from 'axios';
+import { getDefaultNormalizer } from '@testing-library/react';
+import axios from 'axios';
+import Home from './components/pages/Home';
+import Games from './components/pages/Games';
+import Leaderboards from './components/pages/Leaderboards';
+import Profile from './components/pages/Profile';
+import SignIn from './components/pages/SignIn';
+import SignUp from './components/pages/SignUp';
+
+
+
+
 
 function App() {
-
-  const getCar = () => {
-    Axios.get("/customer/viewCars").then((response) => {
-        console.log(response)
-    });
-  };
   return (
   <>
   <Router>
     <NavBar />
       <Routes>
-        <Route exact path='/home' />
+        <Route exact path='/'  element={< Home/>}/>
+        <Route exact path='/Games'  element={< Games/>}/>
+        <Route exact path='/Leaderboards'  element={< Leaderboards/>}/>
+        <Route exact path='/Profile'  element={< Profile/>}/>
+        <Route exact path='/SignIn'  element={< SignIn/>}/>
+        <Route exact path='/SignUp'  element={< SignUp/>}/>
     </Routes>
   </Router>
-  <div>
-      <button onClick={getCar}>View Cars</button>
-  </div>
   </>
   );
 }
