@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 import { Button } from './Button';
@@ -23,20 +23,19 @@ function NavBar() {
         }
     };
 
-    window.addEventListener('resize',showButton);
+    useEffect(() => {
+        showButton()
+    }, []);
 
-    const getCar = () => {
-        Axios.get("http://localhost:8080/customer/viewCars").then((response) => {
-            console.log(response)
-        })
-    }
-
+    window.addEventListener('resize',showButton); 
     
+
+
   return (
     <>
         <nav className='navbar'>
             <div className='navbar-container'>
-                <Link to="/" className='navbar-logo'>
+                <Link to="/" className='navbar-logo' onClick={closeMobileMenu}>
                     Alchemy <i className='fab fa-typo3' />
                 </Link>
                 <div className='menu-icon' onClick={handleClick}>
