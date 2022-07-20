@@ -19,7 +19,7 @@ export default function Leaderboards(){
     //response.data[0].id
     return (
     
-    <div> 
+    <div className='Bdef'> 
         <button onClick={getJoke}>
             View Leaderboards
         </button>
