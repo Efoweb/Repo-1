@@ -16,7 +16,7 @@ export default function Leaderboards(){
             (response) => {
                 console.log(response);
                 const {leaderBoardId, score, title} = response.data[0]
-                setTable(leaderBoardId, score, title;
+                setTable(leaderBoardId, score, title);
                 setTable(Object.keys(response.data[0]).map(Attr => <th key={Attr}>{Attr.toUpperCase()}</th>))
             }
         );
