@@ -57,6 +57,7 @@ const SignIn = () => {
 
     return (
         <>
+            <h1 className="SignIn">
             {success ? (
                 <section>
                     <h1>You are logged in!</h1>
@@ -100,6 +101,7 @@ const SignIn = () => {
                     </p>
                 </section>
             )}
+            </h1>
         </>
     )
 }
