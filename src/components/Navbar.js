@@ -35,7 +35,8 @@ function NavBar() {
         <nav className='navbar'>
             <div className='navbar-container'>
                 <Link to="/" className='navbar-logo' onClick={closeMobileMenu}>
-                    Alchemy <i className='fab fa-typo3' />
+                <img src="./Alchemyl.png" alt="bug" height={70} width={250} />
+                <i className='fab fa-typo3'></i>
                 </Link>
                 <div className='menu-icon' onClick={handleClick}>
                     <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
