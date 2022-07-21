@@ -2,6 +2,9 @@ import { useRef, useState, useEffect } from "react";
 import { faCheck, faTimes, faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import axios from "axios";
+import { link } from 'react-router-dom';
+
+
 
 const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
@@ -10,8 +13,11 @@ const REGISTER_URL = '/register';
 
 const Register = () => {
 
+
+    
     const userRef = useRef();
     const errRef = useRef();
+
 
     const [user, setUser] = useState('');
     const [validName, setValidName] = useState(false);
@@ -27,6 +33,24 @@ const Register = () => {
 
     const [errMsg, setErrMsg] = useState('');
     const [success, setSuccess] = useState(false);
+
+    const viewUser=()=>{
+        axios.get('/users').then((res) => {console.log(res)})
+    }
+
+    const makeUser =()=>{
+        axios.post('/users', {
+            // userId: 1,
+            userName: user,
+            password: pwd
+        })
+        console.log(user)
+        console.log(pwd)
+        
+    }
+    
+
+
 
     useEffect(() => {
         userRef.current.focus();
@@ -94,9 +118,11 @@ const Register = () => {
 
     return (
         <>
+    
+            <h1 className='SignUp'>
             {success ? (
-                <section>
-                    <h1>Success!</h1>
+                <section >
+                    <h1 >Success!</h1>
                     <p>
                         <a href="#">Sign In</a>
                     </p>
@@ -173,17 +199,20 @@ const Register = () => {
                             Must match the first password input field.
                         </p>
 
-                        <button disabled={!validName || !validPwd || !validMatch ? true : false}>Sign Up</button>
+                        {/* <button disabled={!validName || !validPwd || !validMatch ? true : false}>Sign Up</button> */}
+                        <button onClick={makeUser}>Sign Up</button>
                     </form>
                     <p>
                         Already registered?<br />
                         <span className="line">
                             {/*put router link here*/}
-                            <a href="#">Sign In</a>
+                             <a href="/SignIn">Sign In</a>
+                            <button onClick={viewUser}> check </button>
                         </span>
                     </p>
                 </section>
             )}
+            </h1>
         </>
     )
 }
