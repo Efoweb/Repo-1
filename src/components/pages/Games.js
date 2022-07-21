@@ -3,9 +3,12 @@ import '../../App.css'
 
 export default function Games(){
     return (
-        <div >
-            <h1 className='Games'>HEYYYYY YOUUUU GUYSSSSSS GAMES</h1>
-        </div>
+        < >
+            <h1 className='Games'>
+                <button>YOU WILL WIN</button>
+                <button>YOU WILL LOSE</button>
+            </h1>
+        </>
         
     )
 }

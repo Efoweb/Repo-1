@@ -57,7 +57,7 @@ const SignIn = () => {
 
     return (
         <>
-            <h1 className="SignIn">
+            <h1 className='SignIn'>
             {success ? (
                 <section>
                     <h1>You are logged in!</h1>
@@ -96,7 +96,7 @@ const SignIn = () => {
                         Need to register, click here?<br />
                         <span className="line">
                             {/*put router link here*/}
-                            <a href="#">Sign Up</a>
+                            <a href="/SignUp">Sign Up</a>
                         </span>
                     </p>
                 </section>
