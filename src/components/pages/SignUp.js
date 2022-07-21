@@ -55,10 +55,11 @@ const Register = () => {
             user_name: user,
             pword: pwd,
             level:0,
-            logged:true
+            logged:false
         })
-        console.log(user)
-        console.log(pwd)  
+        // console.log(user)
+        // console.log(pwd) 
+        console.log("Your Account has been created :)") 
     }
     
 
