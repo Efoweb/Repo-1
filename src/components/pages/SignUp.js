@@ -36,6 +36,7 @@ const Register = () => {
 
     const viewUser=()=>{
         axios.get('/users').then((res) => {console.log(res)})
+        axios.get('/users').then((res) => {console.log(res)})
     }
 
     const makeUser =()=>{
