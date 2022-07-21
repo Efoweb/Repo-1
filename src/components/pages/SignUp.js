@@ -44,9 +44,21 @@ const Register = () => {
             userName: user,
             password: pwd
         })
+        axios.post('/players', {
+            // userId: 1,
+            userName: user,
+            password: pwd,
+            level:0
+        })
+        axios.post('/currentuser', {
+            nowId: 1,
+            user_name: user,
+            pword: pwd,
+            level:0,
+            logged:true
+        })
         console.log(user)
-        console.log(pwd)
-        
+        console.log(pwd)  
     }
     
 
