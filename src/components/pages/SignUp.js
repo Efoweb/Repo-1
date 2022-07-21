@@ -36,7 +36,6 @@ const Register = () => {
 
     const viewUser=()=>{
         axios.get('/users').then((res) => {console.log(res)})
-        axios.get('/users').then((res) => {console.log(res)})
     }
 
     const makeUser =()=>{
@@ -60,7 +59,7 @@ const Register = () => {
         })
         // console.log(user)
         // console.log(pwd) 
-        console.log("Your Account has been created :)") 
+        console.log("Your Account has been created :) " + user +", " + pwd) 
     }
     
 
