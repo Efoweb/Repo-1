@@ -3,13 +3,10 @@ import './App.css';
 //import './other.css';
 import NavBar from './components/Navbar';
 import { BrowserRouter as Router, Routes ,Route } from 'react-router-dom';
-import Axios from 'axios';
-import { getDefaultNormalizer } from '@testing-library/react';
-import axios from 'axios';
 import Home from './components/pages/Home';
 import Games from './components/pages/Games';
 import Leaderboards from './components/pages/Leaderboards';
-import Profile from './components/pages/Profile';
+import Profile from './components/pages/Profiles';
 import SignIn from './components/pages/SignIn';
 import SignUp from './components/pages/SignUp';
 
